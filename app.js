@@ -8,6 +8,7 @@ var cors = require("cors");
 var indexRouter = require("./routes/index");
 // Add additional routers as such:
 // var usersRouter = require('./routes/users');
+var levelsRouter = require("./routes/levels");
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use("/", indexRouter);
 
 // Kept as an example for adding future routers:
 // app.use("/users", usersRouter);
+app.use("/levels", levelsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
